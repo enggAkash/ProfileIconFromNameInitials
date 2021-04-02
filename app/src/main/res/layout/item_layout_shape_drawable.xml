@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <TextView
+        android:id="@+id/name_initials_text"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/name_bg"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="L" />
+
+
+    <TextView
+        android:id="@+id/name_text"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="1"
+        android:textFontWeight="500"
+        app:layout_constraintEnd_toStartOf="@id/date_text"
+        app:layout_constraintStart_toEndOf="@id/name_initials_text"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Learning Strugglers" />
+
+    <TextView
+        android:id="@+id/subject_text"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintEnd_toStartOf="@id/date_text"
+        app:layout_constraintStart_toStartOf="@id/name_text"
+        app:layout_constraintTop_toBottomOf="@id/name_text"
+        tools:text="Security Alert" />
+
+    <TextView
+        android:id="@+id/body_text"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="vivo Email was granted access to your Google Account"
+        app:layout_constraintEnd_toStartOf="@id/date_text"
+        app:layout_constraintStart_toEndOf="@id/name_initials_text"
+        app:layout_constraintStart_toStartOf="@id/name_text"
+        app:layout_constraintTop_toBottomOf="@id/subject_text" />
+
+
+    <TextView
+        android:id="@+id/date_text"
+        style="@android:style/TextAppearance.DeviceDefault.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@id/name_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Feb 6" />
+
+    <ImageView
+        android:id="@+id/star_image"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_baseline_star_border_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/body_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
